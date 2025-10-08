@@ -5,12 +5,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: blue;
+            background: #f0f0f0;
             padding: 50px;
         }
 
         .login-container {
-            background: blue;
+            background: white;
             padding: 30px;
             width: 300px;
             margin: auto;
@@ -46,17 +46,17 @@
 
 <div class="login-container">
     <h2>Login</h2>
-    <input type="text" id="student" placeholder="Enter Username" />
-    <input type="ankit12" id="ankit12" placeholder="Enter Password" />
+    <input type="text" id="username" placeholder="Enter Username" />
+    <input type="password" id="password" placeholder="Enter Password" />
     <input type="button" value="Login" onclick="handleLogin()" />
     <div class="message" id="message"></div>
 </div>
 
 <script>
-    const storedUsername = "student";
-    const storedPassword = "ankit12";
+    const storedUsername = "ankit";
+    const storedPassword = "ankit123";
 
-    
+   
     function validateCredentials(user, pass) {
         if (user === storedUsername && pass === storedPassword) {
             return true;
@@ -73,7 +73,7 @@
 
         if (validateCredentials(usernameInput, passwordInput)) {
             messageBox.style.color = "green";
-            messageBox.textContent = "welcome to ankit!";
+            messageBox.textContent = "Login successful, Ankit Chaudhary";
         } else {
             messageBox.style.color = "red";
             messageBox.textContent = "Invalid username or password.";
